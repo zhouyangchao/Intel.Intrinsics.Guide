@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html>
+	
+	
+<!-- Mirrored from software.intel.com/sites/landingpage/IntrinsicsGuide/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Mar 2015 03:42:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv='X-UA-Compatible' content='IE=9; IE=8; IE=7; IE=EDGE' />
+		<title>指令函数指引</title>
+		<link rel='shortcut icon' href='files/favicon.ico' />
+		<link type='text/css' rel='stylesheet' href='files/style.min.css' />
+		<script type='text/javascript' src='files/jquery.min.js'></script>
+		<!--<link href='https://fonts.googleapis.com/css?family=Oxygen+Mono' rel='stylesheet' type='text/css' />-->
+		<meta name='fragment' content='!'>
+		<meta name='Description' content='The Intel Intrinsics Guide is an interactive reference tool for Intel intrinsic instructions, which are C style functions that provide access to many Intel instructions - including Intel&reg; SSE, AVX, AVX-512, and more - without the need to write assembly code.' />
+	</head>
+
+	<body>
+		
+		<div id='container'>
+			
+			<div id='left'>
+				
+				<div>
+					<img id='logo' src='files/intel.png' alt='Intel' />
+					<div id='title'><b>指令函数指引</b></div>
+					<div style='clear:both;'></div>
+				</div><br />
+				
+				<div><b>指令集</b></div>
+				<div id='techs'>
+					<div class='MMX tech'><input type='checkbox' /> MMX</div>
+					<div class='SSE tech'><input type='checkbox' /> SSE</div>
+					<div class='SSE2 tech'><input type='checkbox' /> SSE2</div>
+					<div class='SSE3 tech'><input type='checkbox' /> SSE3</div>
+					<div class='SSSE3 tech'><input type='checkbox' /> SSSE3</div>
+					<div class='SSE4_1 tech'><input type='checkbox' /> SSE4.1</div>
+					<div class='SSE4_2 tech'><input type='checkbox' /> SSE4.2</div>
+					<div class='AVX tech'><input type='checkbox' /> AVX</div>
+					<div class='AVX2 tech'><input type='checkbox' /> AVX2</div>
+					<div class='FMA tech'><input type='checkbox' /> FMA</div>
+					<div class='AVX_512 tech'><input type='checkbox' /> AVX-512</div>
+					<div id='avx512_techs' style='display:none;'>
+						<div class='AVX512F avx512tech'><input type='checkbox' /> AVX-512F</div>
+						<div class='AVX512BW avx512tech'><input type='checkbox' /> AVX-512BW</div>
+						<div class='AVX512CD avx512tech'><input type='checkbox' /> AVX-512CD</div>
+						<div class='AVX512DQ avx512tech'><input type='checkbox' /> AVX-512DQ</div>
+						<div class='AVX512ER avx512tech'><input type='checkbox' /> AVX-512ER</div>
+						<div class='AVX512IFMA52 avx512tech'><input type='checkbox' /> AVX-512IFMA52</div>
+						<div class='AVX512PF avx512tech'><input type='checkbox' /> AVX-512PF</div>
+						<div class='AVX512VBMI avx512tech'><input type='checkbox' /> AVX-512VBMI</div>
+					</div>
+					<div class='KNC tech'><input type='checkbox' /> KNC</div>
+					<div class='SVML tech'><input type='checkbox' /> SVML</div>
+					<div class='Other tech'><input type='checkbox' /> Other</div>
+					<div id='other_techs'></div>
+				</div><br />
+
+				<div><b>类别</b></div>
+				<div id='categories'></div>
+
+			</div>
+			
+			<div id='main'>
+			
+				<div id='about' style='display:none;'>
+					Intrl指令指引是针对Intel指令集的互动性参考工具，提供包括SSE/AVX/AVX-512等多数Intel指令集的类C函数访问。<br/>如需更新数据，请访问
+					<a href='http://software.intel.com/sites/landingpage/IntrinsicsGuide/index.html'>最新地址</a>，跟踪获取其XML数据并替换。<br/>
+					请始终通过本地网页服务器进行访问，否则页面的jQuery将无法正确加载XML数据。
+					<img id='close' src='files/x.png' alt='Close' />
+				</div>
+			
+				<div id='info'>?</div>
+				<div id='search_wrapper'>
+					<div id='search_tokens'></div>
+					<input id='search' type='text' value='_mm_搜索' autocomplete='off' />
+					<img id='clear' src='files/x.png' style='display:none;' alt='Clear' />
+				</div><br />
+				
+				<div id='intrinsics_list'>正在加载……</div>
+				
+			</div>
+			
+			<div style='clear:both;'></div>
+		</div>
+		
+		<!-- popbox's -->
+		<div class='popbox info' style='width:250px;'>
+			遇到问题或缺陷，请访问<a href='http://software.intel.com/en-us/forums/topic/363747' target='_blank' style='color:rgb(8,114,197);'>此处</a>。
+		</div>
+		<div class='popbox sequence' style='width:250px;'>
+			指令函数表示一系列指令序列，可能不比原生指令执行性能好。望周知。
+		</div>
+		<div class='popbox vexeq' style='width:250px;'>
+			指令函数可能产生VEX编码的指令<span class='mono'>v<span class='base'></span></span>。
+		</div>
+		<div class='popbox vexeq-hazard' style='width:250px;'>
+			指令函数可能产生VEX编码的指令<span class='mono'>v<span class='base'></span></span>。如果指令本身不是VEX编码的，<span class='mono'><span class='base'></span></span>存在256位和512位指令混合时可能引发性能损失。
+		</div>
+
+	</body>
+	
+	<script type='text/javascript' src='files/intrinsicsguide.zh.js'></script>
+	
+
+<!-- Mirrored from software.intel.com/sites/landingpage/IntrinsicsGuide/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Mar 2015 03:42:42 GMT -->
+</html>

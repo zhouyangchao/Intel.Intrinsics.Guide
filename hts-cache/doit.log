@@ -1,0 +1,8 @@
+-qiC2%Pns0%s%u%I0p7J1024R99H2%kf2A9999999%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "zh, en, *" https://software.intel.com/sites/landingpage/IntrinsicsGuide/ -O1 "F:\DevelopRoot\Compile\Intel\web\Intel Intrinsics Guide" -* +https://software.intel.com/sites/landingpage/IntrinsicsGuide/* +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp
+File generated automatically on Mon, 30 Mar 2015 11:42:42, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+
