@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html>
+	
+	<head>
+		<meta http-equiv='X-UA-Compatible' content='IE=9; IE=8; IE=7; IE=EDGE' />
+		<title>Intel Intrinsics Guide</title>
+		<link rel='shortcut icon' href='files/favicon.ico' />
+		<link type='text/css' rel='stylesheet' href='files/style.min.css' />
+		<script type='text/javascript' src='files/jquery.min.js'></script>
+		<!--<link href='https://fonts.googleapis.com/css?family=Oxygen+Mono' rel='stylesheet' type='text/css' />-->
+		<meta name='fragment' content='!'>
+		<meta name='Description' content='The Intel Intrinsics Guide is an interactive reference tool for Intel intrinsic instructions, which are C style functions that provide access to many Intel instructions - including Intel&reg; SSE, AVX, AVX-512, and more - without the need to write assembly code.' />
+	</head>
+
+	<body>
+		
+		<div id='container'>
+			
+			<div id='left'>
+				
+				<div>
+					<img id='logo' src='files/intel.png' alt='Intel' />
+					<div id='title'><b>Intrinsics Guide</b></div>
+					<div style='clear:both;'></div>
+				</div><br />
+				
+				<div><b>Technologies</b></div>
+				<div id='techs'>
+					<div class='MMX tech'><input type='checkbox' /> MMX</div>
+					<div class='SSE tech'><input type='checkbox' /> SSE</div>
+					<div class='SSE2 tech'><input type='checkbox' /> SSE2</div>
+					<div class='SSE3 tech'><input type='checkbox' /> SSE3</div>
+					<div class='SSSE3 tech'><input type='checkbox' /> SSSE3</div>
+					<div class='SSE4_1 tech'><input type='checkbox' /> SSE4.1</div>
+					<div class='SSE4_2 tech'><input type='checkbox' /> SSE4.2</div>
+					<div class='AVX tech'><input type='checkbox' /> AVX</div>
+					<div class='AVX2 tech'><input type='checkbox' /> AVX2</div>
+					<div class='FMA tech'><input type='checkbox' /> FMA</div>
+					<div class='AVX_512 tech'><input type='checkbox' /> AVX-512</div>
+					<div id='avx512_techs' style='display:none;'>
+						<div class='AVX512F avx512tech'><input type='checkbox' /> AVX-512F</div>
+						<div class='AVX512BW avx512tech'><input type='checkbox' /> AVX-512BW</div>
+						<div class='AVX512CD avx512tech'><input type='checkbox' /> AVX-512CD</div>
+						<div class='AVX512DQ avx512tech'><input type='checkbox' /> AVX-512DQ</div>
+						<div class='AVX512ER avx512tech'><input type='checkbox' /> AVX-512ER</div>
+						<div class='AVX512IFMA52 avx512tech'><input type='checkbox' /> AVX-512IFMA52</div>
+						<div class='AVX512PF avx512tech'><input type='checkbox' /> AVX-512PF</div>
+						<div class='AVX512VBMI avx512tech'><input type='checkbox' /> AVX-512VBMI</div>
+					</div>
+					<div class='KNC tech'><input type='checkbox' /> KNC</div>
+					<div class='SVML tech'><input type='checkbox' /> SVML</div>
+					<div class='Other tech'><input type='checkbox' /> Other</div>
+					<div id='other_techs'></div>
+				</div><br />
+
+				<div><b>Categories</b></div>
+				<div id='categories'></div>
+
+			</div>
+			
+			<div id='main'>
+			
+				<div id='about' style='display:none;'>
+					The Intel Intrinsics Guide is an interactive reference tool for Intel intrinsic instructions, which are C style functions that provide access to many Intel instructions - including Intel&reg; SSE, AVX, AVX-512, and more - without the need to write assembly code.<br/>
+					If you want to update this offline copy to its lastest version, please visit <a href='http://software.intel.com/sites/landingpage/IntrinsicsGuide/index.html'>Its Original Page</a>, keep tracking its requests and find the XML which has a similiar name as 'data-3.3.7.xml' and replace the 'data.xml' in 'files' folder.<br/>
+					Also please always run this guide with nginx or other web server, and visit through localhost. Or else the jquery may fail to load xml.
+					<img id='close' src='files/x.png' alt='Close' />
+				</div>
+			
+				<div id='info'>?</div>
+				<div id='search_wrapper'>
+					<div id='search_tokens'></div>
+					<input id='search' type='text' value='_mm_search' autocomplete='off' />
+					<img id='clear' src='files/x.png' style='display:none;' alt='Clear' />
+				</div><br />
+				
+				<div id='intrinsics_list'>Loading...</div>
+				
+			</div>
+			
+			<div style='clear:both;'></div>
+		</div>
+		
+		<!-- popbox's -->
+		<div class='popbox info' style='width:250px;'>
+			Questions? Issues? <a href='http://software.intel.com/en-us/forums/topic/363747' target='_blank' style='color:rgb(8,114,197);'>Go Here.</a>
+		</div>
+		<div class='popbox sequence' style='width:250px;'>
+			This intrinsic generates a sequence of instructions, which may perform worse than a native instruction. Consider the performance impact of this intrinsic.
+		</div>
+		<div class='popbox vexeq' style='width:250px;'>
+			This intrinsic may generate the VEX-encoded instruction <span class='mono'>v<span class='base'></span></span>
+		</div>
+		<div class='popbox vexeq-hazard' style='width:250px;'>
+			This intrinsic may generate the VEX-encoded instruction <span class='mono'>v<span class='base'></span></span>. If the instruction is not VEX encoded, <span class='mono'><span class='base'></span></span> may cause performance penalties if mixed with 256-bit or 512-bit instructions.
+		</div>
+
+	</body>
+	
+	<script type='text/javascript' src='files/intrinsicsguide.min.3.3.16.js'></script>
+	
+</html>
